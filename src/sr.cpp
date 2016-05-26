@@ -162,14 +162,13 @@ void A_timerinterrupt()
             setTime(i);  
         }  
     }
-    //if(RTT_Delay - (get_sim_time() - getTime( secmin))>0) 
-    //   starttimer(0,RTT_Delay - (get_sim_time() - getTime(secmin)));
-   // else
-    //{
+    if(RTT_Delay - (get_sim_time() - getTime( secmin))>0) 
+       starttimer(0,RTT_Delay - (get_sim_time() - getTime(secmin)));
+    else
+    {
        starttimer(0,RTT_Delay );
-    //   setTime(secmin);
-    //}
-    //setTime(min);
+    }
+    setTime(min);
         
 
   //  for(int i = base;i<base+window&&i<nextseqnum;i++)
